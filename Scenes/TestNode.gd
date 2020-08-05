@@ -7,13 +7,16 @@ extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
+var simpleLR = SimpleLinearRegression.new()
 func _ready():
+	$SLR_Start_Train.connect("pressed",self,"SLRStartTrainingPressed")
+	$SLR_CalculateOutput.connect("pressed",self,"SLRCalculateOutputPressed")
+	simpleLR.connect("TrainingFinished",self,"SLRTrainingFinishedSlot")
 	var test = 10
 	var summer = NeuralNetwork.new()
 	summer.add(10)
 	print(summer.get_total())
-	
-	var simpleLR = SimpleLinearRegression.new()
+
 	print(simpleLR.TestFunc())
 	
 	var multiLR = MultipleLinearRegression.new()
@@ -22,7 +25,21 @@ func _ready():
 	var naiveBC = NaiveBayesClassifier.new()
 	print(naiveBC.TestFunc())
 
+	var logRegression = LogisticRegression.new()
+	print(logRegression.TestFunc())
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+func _process(delta):
+	print("Processing..")
+
+
+func SLRStartTrainingPressed():
+	simpleLR.SetInputs([2, 3, 5, 7, 9])
+	simpleLR.SetOutputs([4, 5, 7, 10, 15])
+	simpleLR.StartTraining()
+
+func SLRCalculateOutputPressed():
+	print(simpleLR.CalculateOutput(16))
+
+func SLRTrainingFinishedSlot(input):
+	print("Training Finished: ",input)

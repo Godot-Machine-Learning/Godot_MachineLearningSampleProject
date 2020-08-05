@@ -4,3 +4,32 @@
 
 [node name="TestNode" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 300 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SLR_Start_Train" type="Button" parent="."]
+margin_left = 165.0
+margin_top = 120.0
+margin_right = 425.0
+margin_bottom = 170.0
+text = "Simple Linear Regression Start Training"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SLR_CalculateOutput" type="Button" parent="."]
+margin_left = 536.0
+margin_top = 116.0
+margin_right = 820.0
+margin_bottom = 166.0
+text = "Simple Linear Regression Calculate Output"
+__meta__ = {
+"_edit_use_anchors_": false
+}
