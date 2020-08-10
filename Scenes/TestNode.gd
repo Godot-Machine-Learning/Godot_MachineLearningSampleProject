@@ -15,7 +15,7 @@ func _ready():
 	simpleLR.connect("TrainingFinished",self,"SLRTrainingFinishedSlot")
 	$MLR_Start_Train.connect("pressed",self,"MLRStartTrainingPressed")
 	$MLR_Calculate_Output.connect("pressed",self,"MLRCalculateOutputPressed")
-	
+	multiLR.connect("TrainingFinished",self,"MLRTrainingFinishedSlot")
 	
 
 	print(simpleLR.TestFunc())
