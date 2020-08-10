@@ -15,10 +15,10 @@ __meta__ = {
 }
 
 [node name="SLR_Start_Train" type="Button" parent="."]
-margin_left = 165.0
-margin_top = 120.0
-margin_right = 425.0
-margin_bottom = 170.0
+margin_left = 179.0
+margin_top = 115.0
+margin_right = 439.0
+margin_bottom = 165.0
 text = "Simple Linear Regression Start Training"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -29,6 +29,26 @@ margin_left = 536.0
 margin_top = 116.0
 margin_right = 820.0
 margin_bottom = 166.0
+text = "Simple Linear Regression Calculate Output"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MLR_Start_Train" type="Button" parent="."]
+margin_left = 173.0
+margin_top = 234.0
+margin_right = 434.0
+margin_bottom = 284.0
+text = "MultipleLinearRegression Start Training"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MLR_Calculate_Output" type="Button" parent="."]
+margin_left = 530.0
+margin_top = 231.0
+margin_right = 824.0
+margin_bottom = 281.0
 text = "Simple Linear Regression Calculate Output"
 __meta__ = {
 "_edit_use_anchors_": false

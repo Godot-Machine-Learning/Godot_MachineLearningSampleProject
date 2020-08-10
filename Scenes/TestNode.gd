@@ -8,18 +8,19 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 var simpleLR = SimpleLinearRegression.new()
+var multiLR = MultipleLinearRegression.new()
 func _ready():
 	$SLR_Start_Train.connect("pressed",self,"SLRStartTrainingPressed")
 	$SLR_CalculateOutput.connect("pressed",self,"SLRCalculateOutputPressed")
 	simpleLR.connect("TrainingFinished",self,"SLRTrainingFinishedSlot")
-	var test = 10
-	var summer = NeuralNetwork.new()
-	summer.add(10)
-	print(summer.get_total())
+	$MLR_Start_Train.connect("pressed",self,"MLRStartTrainingPressed")
+	$MLR_Calculate_Output.connect("pressed",self,"MLRCalculateOutputPressed")
+	
+	
 
 	print(simpleLR.TestFunc())
 	
-	var multiLR = MultipleLinearRegression.new()
+	
 	print(multiLR.TestFunc())
 	
 	var naiveBC = NaiveBayesClassifier.new()
@@ -27,10 +28,6 @@ func _ready():
 
 	var logRegression = LogisticRegression.new()
 	print(logRegression.TestFunc())
-
-
-func _process(delta):
-	print("Processing..")
 
 
 func SLRStartTrainingPressed():
@@ -43,3 +40,27 @@ func SLRCalculateOutputPressed():
 
 func SLRTrainingFinishedSlot(input):
 	print("Training Finished: ",input)
+
+
+func MLRStartTrainingPressed():
+	var Inputmatrix = [[110,40],[120,30],[120,30],[90,0],[80,10]]
+	var outputMatrix = [100,90,80,70,60]
+	for eachone in Inputmatrix:
+		multiLR.InsertMultipleInput(eachone)
+	multiLR.SetOutputs(outputMatrix)
+	multiLR.StartTraining()
+
+func MLRCalculateOutputPressed():
+	var testInputMatrix = [110,40] 
+	print(multiLR.CalculateForMultipleInput(testInputMatrix))
+
+func MLRTrainingFinishedSlot(input):
+	print("Training Finished: ",input)
+
+
+
+
+
+
+
+
