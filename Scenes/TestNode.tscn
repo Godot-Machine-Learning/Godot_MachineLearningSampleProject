@@ -15,41 +15,81 @@ __meta__ = {
 }
 
 [node name="SLR_Start_Train" type="Button" parent="."]
-margin_left = 179.0
-margin_top = 115.0
-margin_right = 439.0
-margin_bottom = 165.0
+margin_left = 178.159
+margin_top = 141.068
+margin_right = 438.159
+margin_bottom = 191.068
 text = "Simple Linear Regression Start Training"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SLR_CalculateOutput" type="Button" parent="."]
-margin_left = 536.0
-margin_top = 116.0
-margin_right = 820.0
-margin_bottom = 166.0
+margin_left = 527.591
+margin_top = 144.59
+margin_right = 811.591
+margin_bottom = 194.59
 text = "Simple Linear Regression Calculate Output"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MLR_Start_Train" type="Button" parent="."]
-margin_left = 173.0
-margin_top = 234.0
-margin_right = 434.0
-margin_bottom = 284.0
+margin_left = 173.841
+margin_top = 250.818
+margin_right = 434.841
+margin_bottom = 300.818
 text = "MultipleLinearRegression Start Training"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MLR_Calculate_Output" type="Button" parent="."]
-margin_left = 530.0
-margin_top = 231.0
-margin_right = 824.0
-margin_bottom = 281.0
+margin_left = 529.159
+margin_top = 254.545
+margin_right = 823.159
+margin_bottom = 304.545
 text = "Simple Linear Regression Calculate Output"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NaiveBayesClassifier_Start_Train" type="Button" parent="."]
+margin_left = 187.773
+margin_top = 368.204
+margin_right = 426.773
+margin_bottom = 418.204
+text = "Naive Bayes Classifier Start Training"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NaiveBayesClassifier_CalculateOutput" type="Button" parent="."]
+margin_left = 533.978
+margin_top = 368.568
+margin_right = 796.978
+margin_bottom = 418.568
+text = "Naive Bayes Classifier Calculate Output"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logistic_Regression_Start_Train" type="Button" parent="."]
+margin_left = 202.895
+margin_top = 464.136
+margin_right = 424.895
+margin_bottom = 514.136
+text = "Logistic Regression Start Training"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logistic_Regression_CalculateOutput" type="Button" parent="."]
+margin_left = 534.81
+margin_top = 465.016
+margin_right = 819.81
+margin_bottom = 515.016
+text = "Logistic Regression Start Calculate Output"
 __meta__ = {
 "_edit_use_anchors_": false
 }
